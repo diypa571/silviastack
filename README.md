@@ -2,9 +2,8 @@ Installing Apache, php,mysql
 sudo bash install
 sudo bash  php
 sudo bas mysql
-sudo bash ufw // Configuring ufw 
+sudo bash addHost.sh test.com
+sudo bash ufw
 
-
-Adding virtual hosts
-
-Configuring ufw 
+ 
+ 
