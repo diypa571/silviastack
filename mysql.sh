@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Diypa571
 sudo apt install mysql-server
 
 
