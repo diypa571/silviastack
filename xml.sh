@@ -1,13 +1,6 @@
-#!/bin/bash
-#diypa571
-# Path to the PHP-FPM pool configuration file
-pool_config_file="/etc/php/8.2/fpm/pool.d/www.conf"  # Update this path if needed
-
-# Add ".xml" to the security.limit_extensions line
-#sed -i 's/security.limit_extensions = .php .php3 .php4 .php5 .php7/security.limit_extensions = .php .php3 .php4 .php5 .php7 .xml/' $pool_config_file
-sed -i 's/;security.limit_extensions = .php .php3 .php4 .php5 .php7/security.limit_extensions = .php .php3 .php4 .php5 .php7 .xml/' $pool_config_file
-
-# Restart PHP-FPM service
-sudo systemctl restart php8.2-fpm
-
-echo "XML support has been enabled for PHP-FPM. Restarted php8.2-fpm service."
+ # diypa571
+apache_config_file="/etc/php/8.2/apache2/php.ini"  # Update this path if needed
+# Add ".xml" to the extension list
+sed -i 's/\(extension=xml.so\)/;\1/' $apache_config_file
+sudo systemctl restart apache2
+echo "XML support has been enabled for Apache. Restarted Apache service."
