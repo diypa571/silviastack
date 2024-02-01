@@ -2,7 +2,7 @@
 # Diypa571
 
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root (use sudo)"
+    echo "sudo first .....pizza then"
     exit 1
 fi
 
