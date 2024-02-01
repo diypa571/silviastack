@@ -30,10 +30,13 @@ cat <<EOL | sudo tee $VHOST_FILE > /dev/null
 </VirtualHost>
 EOL
 
+ 
 sudo a2ensite $DOMAIN.conf
 
+ 
 sudo systemctl restart apache2
 
-echo "127.0.0.1 $DOMAIN" | sudo tee -a /etc/hosts
+ 
+echo "127.0.0.1 $DOMAIN" | sudo tee -a /etc/hosts > /dev/null
 
 echo "Virtual host for $DOMAIN created successfully, and added to /etc/hosts."
