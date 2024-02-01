@@ -20,9 +20,9 @@
  
  sudo bash ufw.sh
  
+ - 👀  ********** Mer avancerat
+
  
- 
- **********Mer avancerat************
  
  sudo bash installincxml.sh 
  
