@@ -31,11 +31,11 @@ cat <<EOL | sudo tee $VHOST_FILE > /dev/null
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 
-    ErrorDocument 400 /errors/error_400.html
-    ErrorDocument 401 /errors/error_401.html
-    ErrorDocument 403 /errors/error_403.html
-    ErrorDocument 404 /errors/error_404.html
-    ErrorDocument 500 /errors/error_500.html
+    ErrorDocument 400 /errors/400.html
+    ErrorDocument 401 /errors/401.html
+    ErrorDocument 403 /errors/403.html
+    ErrorDocument 404 /errors/404.html
+    ErrorDocument 500 /errors/500.html
 
     <Directory "$WEB_ROOT/html">
         AllowOverride All
@@ -43,7 +43,7 @@ cat <<EOL | sudo tee $VHOST_FILE > /dev/null
 </VirtualHost>
 EOL
 
-# Enable virtual host and restart Apache
+
 sudo a2ensite $DOMAIN.conf
 sudo systemctl restart apache2
 
