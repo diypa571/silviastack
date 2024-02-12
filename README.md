@@ -1,3 +1,7 @@
+   Using this bash scripts, you will be able to automaticly install apache2, php and mysql.
+
+  And yes,it is possible   installing it on virtual machines AWS, GPS Linode and Digitalocean provides.
+
  
  Installation av Apache, php,mysql och ufw
  
