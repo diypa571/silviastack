@@ -37,6 +37,9 @@
  sudo bash addHostCustom.sh test.com
  
  sudo bash ufw.sh
+
+
+Website folder::::     /var/www/test.com
  
  
   
