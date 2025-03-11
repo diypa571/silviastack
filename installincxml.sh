@@ -8,6 +8,7 @@ sudo systemctl enable apache2
 sudo systemctl start apache2
 
 sudo ufw allow in "Apache"
+sudo ufw allow 22
 
 apache_config_file="/etc/apache2/apache2.conf" 
 
