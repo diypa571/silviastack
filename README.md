@@ -1,6 +1,6 @@
-adduser ubuntu
-usermod -aG sudo ubuntu
-rsync --archive --chown=ubuntu:ubuntu ~/.ssh /home/ubuntu
+      adduser ubuntu
+      usermod -aG sudo ubuntu
+      rsync --archive --chown=ubuntu:ubuntu ~/.ssh /home/ubuntu
 
    
    Using these bash scripts, you will be able to automaticly install apache2, php and mysql.
