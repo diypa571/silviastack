@@ -44,7 +44,33 @@
  sudo bash ufw.sh
 
 
-Website folder::::     /var/www/test.com
+******************
+sudo bash install.sh 
+sudo ufw allow 22
+sudo ufw enable
+sudo ufw status
+sudo bash php.sh
+
+sudo bash php.sh 
+bash mysql.sh 
+systemctl reload apache2
+sudo addHostCustom1.sh applifee.com
+bash addHostCustom1.sh applifee.com
+systemctl restart apache2
+
+sudo bash addHostCustom1.sh demo.com
+systemctl restart apache2
+
+whoami
+chown -R $(whoami) /var/www/
+chgrp -R www-data /var/www/
+chmod -R 755 /var/www/
+chmod g+s /var/www/
+sudo chown -R $(whoami) /var/www/
+sudo chgrp -R www-data /var/www/
+sudo chmod -R 755 /var/www/
+sudo chmod g+s /var/www/
+*****************************
  
  
   
