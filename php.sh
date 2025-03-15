@@ -2,7 +2,7 @@
 #Diypa571, v 8.2 will be installed
 PHP_VERSION="8.2"
 
-
+sudo apt update
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
  
