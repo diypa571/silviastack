@@ -66,10 +66,7 @@
             chgrp -R www-data /var/www/
             chmod -R 755 /var/www/
             chmod g+s /var/www/
-            sudo chown -R $(whoami) /var/www/
-            sudo chgrp -R www-data /var/www/
-            sudo chmod -R 755 /var/www/
-            sudo chmod g+s /var/www/
+ 
             *****************************
  
  
