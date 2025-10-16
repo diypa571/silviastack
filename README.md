@@ -71,7 +71,7 @@
 
       
               No php extentions...
-      sudo nano /etc/apache2/sites-available/unter.se.conf
+      sudo nano /etc/apache2/sites-available/demo.se.conf
 
 
       <VirtualHost *:80>
