@@ -67,7 +67,34 @@
      sudo chmod g+s /var/www/
       
       *****************************
+
+
       
+              No php extentions...
+      sudo nano /etc/apache2/sites-available/unter.se.conf
+
+
+      <VirtualHost *:80>
+    ServerAdmin webmaster@demo.se
+    ServerName demo.se
+    ServerAlias www.demo.se
+    DocumentRoot /var/www/demo.se
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    ErrorDocument 400 /errors/400.html
+    ErrorDocument 401 /errors/401.html
+    ErrorDocument 403 /errors/403.html
+    ErrorDocument 404 /errors/404.html
+    ErrorDocument 500 /errors/500.html
+
+    <Directory "/var/www/demo.se">
+        AllowOverride All
+        Require all granted
+    </Directory>
+      </VirtualHost>
+
       
       
       
