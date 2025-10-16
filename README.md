@@ -99,24 +99,24 @@
 
       htaccess
       # Enable rewriting
-RewriteEngine On
-
-# Ensure base path
-RewriteBase /
-
-# 1️⃣ Redirect URLs ending with .php to the clean version
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?]
-RewriteRule ^ %1 [R=301,L]
-
-# 2️⃣ Internally rewrite clean URLs to .php files (even in subfolders)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L,QSA]
-
-# 3️⃣ Redirect /index or /index.php to /
-RewriteCond %{THE_REQUEST} \s/+(.*/)?index(\.php)?[\s?]
-RewriteRule ^ %1 [R=301,L]
+      RewriteEngine On
+      
+      # Ensure base path
+      RewriteBase /
+      
+         #  Redirect URLs ending with .php to the clean version
+      RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?]
+      RewriteRule ^ %1 [R=301,L]
+      
+          #   Internally rewrite clean URLs to .php files (even in subfolders)
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteCond %{REQUEST_FILENAME}.php -f
+      RewriteRule ^(.+)$ $1.php [L,QSA]
+      
+          #  Redirect /index or /index.php to /
+      RewriteCond %{THE_REQUEST} \s/+(.*/)?index(\.php)?[\s?]
+      RewriteRule ^ %1 [R=301,L]
 
       
       
