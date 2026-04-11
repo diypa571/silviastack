@@ -111,4 +111,9 @@
             
             #  (Optional) Make sure index.php works for root requests
             DirectoryIndex index.php
-                  
+
+
+
+            ****
+                  for dir in */; do   sudo chown www-data:www-data "$dir"; done
+
