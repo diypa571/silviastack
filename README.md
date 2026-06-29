@@ -123,6 +123,10 @@
 
 demo@demo:~$ 
 sudo sed -i -e 's/^[#[:space:]]*PasswordAuthentication.*/PasswordAuthentication no/' -e 's/^[#[:space:]]*PubkeyAuthentication.*/PubkeyAuthentication yes/' -e 's/^[#[:space:]]*PermitRootLogin.*/PermitRootLogin no/' -e 's/^[#[:space:]]*KbdInteractiveAuthentication.*/KbdInteractiveAuthentication no/' -e 's/^[#[:space:]]*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config && sudo sshd -t && sudo systemctl restart ssh
+
+
+verify
+grep -E "^PasswordAuthentication|^PubkeyAuthentication|^PermitRootLogin|^KbdInteractiveAuthentication|^ChallengeResponseAuthentication" /etc/ssh/sshd_config
  
 
 
